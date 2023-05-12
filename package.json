@@ -1,13 +1,19 @@
 {
-    "name":"node-deall-crud-express-docker-image",
-    "version":"1.0.0",
-    "description":"Nodejs Express Docker Image CRUD - Deall",
-    "author":"imam932",
-    "main":"index.js",
-    "license":"ISC",
-    "keywords":["nodejs","express","bootstrap"],
-    "dependencies":
-    {
-        "express":"^4.18.2"
+    "name": "node-deall-crud-express-docker-image",
+    "version": "1.0.0",
+    "description": "Nodejs Express Docker Image CRUD - Deall",
+    "author": "imam932",
+    "main": "index.js",
+    "license": "ISC",
+    "keywords": [
+        "nodejs",
+        "express",
+        "mongodb",
+        "api"
+    ],
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "mongoose": "^7.1.1"
     }
 }
