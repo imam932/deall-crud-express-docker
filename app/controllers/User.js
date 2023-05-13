@@ -1,4 +1,5 @@
 const db = require("../models");
+const {auth} = require("../middlewares/auth")
 const User = db.users;
 
 // Create and Save a new User
@@ -14,26 +15,26 @@ exports.create = (req, res) => {
     }
 
     // Create a User
-    const user = new User({
-        name: req.body.name,
-        email: req.body.email,
-        gender: req.body.gender,
-        address: req.body.address,
-        phone: req.body.phone,
-        description: req.body.description,
-    });
+    const newuser = new User(req.body);
 
     // Save User in the database
-    user.save(user)
+    User.find({email:newuser.email})
     .then(data => {
-        res.send(data);
+        if (!data) {
+            res.status(400).json({ auth : false, message :"email exits"});
+        }else{
+            newuser.save(newuser)
+            .then(data => {
+                res.send(data);
+            })
+            .catch(err => {
+                res.status(500).send({
+                    message:
+                    err.message || "Some error occurred while creating the User."
+                });
+            });
+        }
     })
-    .catch(err => {
-        res.status(500).send({
-            message:
-            err.message || "Some error occurred while creating the User."
-        });
-    });
 };
 
 // Retrieve all Users from the database.
@@ -42,7 +43,7 @@ exports.findAll = (req, res) => {
     const name = req.query.name;
     var condition = name ? { name: { $regex: new RegExp(name), $options: "i" } } : {};
   
-    User.find(condition)
+    User.paginate(condition)
     .then(data => {
         res.send(data);
     })
@@ -55,10 +56,27 @@ exports.findAll = (req, res) => {
 };
 
 // Find a single User with an id
-exports.findOne = (req, res) => {
+exports.findSingle = (req, res) => {
     const id = req.params.id;
 
     User.findById(id)
+    .then(data => {
+        if (!data)
+            res.status(404).send({ message: "Not found User with id" + id});
+        else res.send(data);
+    })
+    .catch(err => {
+        res.status(500)
+        .send({ message: "Error retrieving User with id=" + id });
+    });
+};
+
+// Find a single User with an id and show password (Admin role)
+exports.findSingleAndPassword = (req, res) => {
+    const id = req.params.id;
+
+    User.findById(id)
+    .select("+password")
     .then(data => {
         if (!data)
             res.status(404).send({ message: "Not found User with id" + id});
