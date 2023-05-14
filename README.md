@@ -18,6 +18,11 @@ npm install
 node service.js
 ```
 
+# API Documentation With Collection Postman
+download [API Collection](https://github.com/imam932/deall-crud-express-docker/blob/master/Deall%20Skill%20Test.postman_collection.json) and import to postman app
+
+Or Link https://github.com/imam932/deall-crud-express-docker/blob/master/Deall%20Skill%20Test.postman_collection.json
+
 # Flow API Authentication and Authorization
 
 ##  Flow App
