@@ -18,12 +18,12 @@ npm install
 node service.js
 ```
 
-## Flow Authentication and Authorization
+# Flow Authentication and Authorization
 
-### Flow App
+## Flow App
 
 <img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/architecture%20auth.png" width="600">
 
-### Flow Login
+## Flow Login
 
-<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/login.png" width="600">
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/login.png" width="500">
