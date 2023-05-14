@@ -1,0 +1,310 @@
+{
+	"info": {
+		"_postman_id": "54499154-bac6-449f-80fb-301143c36623",
+		"name": "Deall Skill Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWZmMDVjMTdiZTNkNGE3NTNjNDFjNyIsImlhdCI6MTY4NDAwOTU1OCwiZXhwIjoxNjg0MDk1OTU4fQ.xfkhzj-Pqu6m_32EhMLl5XKy2MrQuU_2dejDB2pzh_g",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "imam nawawi",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWZmMDVjMTdiZTNkNGE3NTNjNDFjNyIsImlhdCI6MTY4NDAwOTU1OCwiZXhwIjoxNjg0MDk1OTU4fQ.xfkhzj-Pqu6m_32EhMLl5XKy2MrQuU_2dejDB2pzh_g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWZmMDVjMTdiZTNkNGE3NTNjNDFjNyIsImlhdCI6MTY4NDAwOTU1OCwiZXhwIjoxNjg0MDk1OTU4fQ.xfkhzj-Pqu6m_32EhMLl5XKy2MrQuU_2dejDB2pzh_g",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/users/645ff05c17be3d4a753c41c7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"645ff05c17be3d4a753c41c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id with show password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWZmMDVjMTdiZTNkNGE3NTNjNDFjNyIsImlhdCI6MTY4NDAwOTU1OCwiZXhwIjoxNjg0MDk1OTU4fQ.xfkhzj-Pqu6m_32EhMLl5XKy2MrQuU_2dejDB2pzh_g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWZmMDVjMTdiZTNkNGE3NTNjNDFjNyIsImlhdCI6MTY4NDAwOTU1OCwiZXhwIjoxNjg0MDk1OTU4fQ.xfkhzj-Pqu6m_32EhMLl5XKy2MrQuU_2dejDB2pzh_g",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/users/645ff05c17be3d4a753c41c7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"645ff05c17be3d4a753c41c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWZmNGMyM2U0ZWM2MjdmNTgxNWE5NCIsImlhdCI6MTY4NDAxMDE5MCwiZXhwIjoxNjg0MDk2NTkwfQ.Hly1MHH7Av8hLJqvxyuugXSUYDrm9sgPqh4X4UhdeBI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/users/645f0e825395cac74249f939",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"645f0e825395cac74249f939"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWZmNGMyM2U0ZWM2MjdmNTgxNWE5NCIsImlhdCI6MTY4NDAxMDE5MCwiZXhwIjoxNjg0MDk2NTkwfQ.Hly1MHH7Av8hLJqvxyuugXSUYDrm9sgPqh4X4UhdeBI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"gender\": \"L\",\n    \"address\": \"Kab. Lumajang\",\n    \"phone\": \"085816179044\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/645feff48551b2244f4baf29",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"645feff48551b2244f4baf29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Admin Imam\",\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"rahasia123\",\n    \"roles\": [\"user\"],\n    \"gender\": \"L\",\n    \"address\": \"Lumajang\",\n    \"phone\": \"085674754834\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"rahasia123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Admin Imam\",\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"rahasia123\",\n    \"roles\": [\"admin\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/roles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "imam nawawi",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
