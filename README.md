@@ -1,4 +1,10 @@
-# Skill Test - Deall BE
+# API BASIC CRUD AND AUTH WITH JWT - Deall BE
+## Tech Used
+* Node.js
+* Express.js
+* MongoDB
+
+
 # Table of Contents
 1. [ Clone Project and run local ](#clone)
 2. [ Deploy to Kubernetes ](#kubectl)
