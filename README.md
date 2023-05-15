@@ -5,6 +5,7 @@
 3. [ Flow API Authentication and Authorization ](#flow)
 4. [ Flow API CRUD User ](#flowcrud)
 5. [ Documentation API Request and Response With Screenshot ](#ssdocs)
+6. [ Credential Admin ](#credential)
 
 <a name="clone"></a>
 # Clone Project and run local
@@ -149,3 +150,11 @@ In deleteing a user requires credentials as admin
 * After Delete
 
 <img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/after%20delete.png" width="500">
+
+<a name="credential"></a>
+# Credential Admin
+
+```
+email: admin@gmail.com
+password: rahasia123
+```

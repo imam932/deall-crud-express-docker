@@ -1,5 +1,4 @@
 const db = require("../models");
-const {auth} = require("../middlewares/auth")
 const User = db.users;
 
 // Create and Save a new User
@@ -21,7 +20,7 @@ exports.create = (req, res) => {
     User.find({email:newuser.email})
     .then(data => {
         if (!data) {
-            res.status(400).json({ auth : false, message :"email exits"});
+            res.status(400).json({ message :"email exits"});
         }else{
             newuser.save(newuser)
             .then(data => {

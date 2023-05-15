@@ -1,8 +1,10 @@
 const express = require('express');
 const cors = require("cors");
 const db = require("./app/models");
+const bcrypt = require("bcryptjs");
 const app = express();
 const Role = db.role;
+const User = db.users
 
 var corsOptions = {
     origin: "http://localhost:8080"
@@ -43,9 +45,23 @@ function initial() {
             });
 
             const roleAdmin = new Role({name: "admin"});
+            const newUser = new User({
+                "name": "Admin CRUD",
+                "email": "admin@gmail.com",
+                "password": bcrypt.hashSync("rahasia123")
+            });
 
-            roleAdmin.save(roleAdmin).then(data => {
+            roleAdmin.save(roleAdmin).then(dataAdmin => {
                 console.log("added 'admin' to roles collection");
+                newUser.save(newUser).then(() => {
+                    newUser.roles = dataAdmin._id;
+                    newUser.save(newUser).then(() => {
+                        console.log("User was registered successfully!");
+                    });
+                })
+                .catch(err => {
+                    console.log("error role create user", err.message);
+                });
             })
             .catch(err => {
                 console.log("error role create admin", err.message);
