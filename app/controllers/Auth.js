@@ -23,7 +23,10 @@ exports.register = (req, res) => {
         .then(roles => {
             user.roles = roles.map(role => role._id);
             user.save(user).then(() => {
-                res.send({ message: "User was registered successfully!" });
+                res.send({
+                  data: user,
+                  message: "User was registered successfully!" 
+                });
             });
         })
         .catch(err => {
