@@ -23,12 +23,6 @@ download [API Collection](https://github.com/imam932/deall-crud-express-docker/b
 
 Or Link https://github.com/imam932/deall-crud-express-docker/blob/master/Deall%20Skill%20Test.postman_collection.json
 
-# Documentation API Request and Response With Screenshot
-
-[Klik here](https://github.com/imam932/deall-crud-express-docker/blob/master/DOCS-API.md)
-
-or link https://github.com/imam932/deall-crud-express-docker/blob/master/DOCS-API.md
-
 # Flow API Authentication and Authorization
 
 ##  Flow App
@@ -70,3 +64,58 @@ In updateing a user requires credentials as admin
 In deleteing a user requires credentials as admin
 
 <img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/delete%20user.png" width="500">
+
+# Documentation API Request and Response With Screenshot
+
+## 1. Register User
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/Api%20register.png" width="500">
+
+## 2. Login
+* Login as User
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/Login%20as%20User.png" width="500">
+
+* Login as Admin
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/Login%20as%20admin.png" width="500">
+
+* Login if user not found
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/Login%20user%20not%20found.png" width="500">
+
+## 3. Get List User
+* Success Get User, user and admin roles that can access this api
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/user%20list.png" width="500">
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/user%20list%20end.png" width="500">
+
+* Get User if token blank
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/if%20token%20blank.png" width="500">
+
+* Get User if token failed
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/if%20token%20filed.png" width="500">
+
+## 3. Get Detail User
+* Get User by ID, user and admin roles that can access this api. In this api the password field is not displayed, useful for limiting access by role users
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/user%20detail%20by%20ID.png" width="500">
+
+* Get User with password (only role admin).
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/get%20detail%20user%20with%20password%20-%20rule%20admin.png" width="500">
+
+* if not access from role user
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/get%20detail%20user%20with%20password%20-%20if%20rule%20user.png" width="500">
+
+## 3. Update User
+* Update User, only admin role that can access this api.
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/update%20user%20success.png" width="500">
+
+* Update User, if user role access this api.
+
+<img src="https://github.com/imam932/deall-crud-express-docker/blob/master/screenshot/api/update%20user%20with%20role%20user.png" width="500">
