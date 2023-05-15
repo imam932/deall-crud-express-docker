@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeapp-deployment
+  namespace: dev
+  labels:
+    app: crudapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crudapp
+  template:
+    metadata:
+      labels:
+        app: crudapp 
+    spec:
+      containers:
+      - name: nodeserver
+        image: imamnawawi/api-basic-crud-user:latest
+        ports:
+        - containerPort: 3000

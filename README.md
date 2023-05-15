@@ -1,14 +1,16 @@
 # Skill Test - Deall BE
 # Table of Contents
 1. [ Clone Project and run local ](#clone)
-2. [ API Documentation With Collection Postman ](#postman)
-3. [ Flow API Authentication and Authorization ](#flow)
-4. [ Flow API CRUD User ](#flowcrud)
-5. [ Documentation API Request and Response With Screenshot ](#ssdocs)
-6. [ Credential Admin ](#credential)
+2. [ Deploy to Kubernetes ](#kubectl)
+3. [ API Documentation With Collection Postman ](#postman)
+4. [ Flow API Authentication and Authorization ](#flow)
+5. [ Flow API CRUD User ](#flowcrud)
+6. [ Documentation API Request and Response With Screenshot ](#ssdocs)
+7. [ Credential Admin ](#credential)
 
 <a name="clone"></a>
 # Clone Project and run local
+
 1. clone repository
 ```
 git clone https://github.com/imam932/deall-crud-express-docker.git
@@ -26,6 +28,21 @@ sudo systemctl start mongod
 npm install
 node service.js
 ```
+
+<a name="kubectl"></a>
+# Deploy to Kubernetes
+1. Login to kubernates command
+2. run command deploy to start deployment
+```
+kubectl apply -f deployment -n namespace
+```
+check pod with `kubectl get pod -n namespace`
+
+3. run command service to create cluster
+```
+kubectl apply -f service -n namespace
+```
+check service with `kubectl get svc -n namespace`
 
 <a name="postman"></a>
 # API Documentation With Collection Postman
