@@ -17,7 +17,7 @@ module.exports = app => {
     router.post("/", [authJwt.verifyToken, authJwt.isAdmin], users.create);
   
     // Retrieve all users
-    router.get("/", [authJwt.verifyToken], users.findAll);
+    router.get("/", [],users.findAll);
   
     // Retrieve a single user with id
     router.get("/:id", [authJwt.verifyToken], users.findSingle);

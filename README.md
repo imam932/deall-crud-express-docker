@@ -1,4 +1,4 @@
-# Skill Test - Deall BE
+# Basic REST API Express.js and MongoDB
 # Table of Contents
 1. [ Clone Project and run local ](#clone)
 2. [ Deploy to Kubernetes ](#kubectl)

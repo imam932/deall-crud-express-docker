@@ -5,6 +5,9 @@ const cors = require("cors");
 const db = require("./app/models");
 const bcrypt = require("bcryptjs");
 const app = express();
+const swaggerUI = require('swagger-ui-express');
+const YAML = require('yamljs');
+const swaggerFile = YAML.load('swagger.yml');
 const Role = db.role;
 const User = db.users
 
@@ -83,6 +86,9 @@ app.get("/", (req, res) => {
 require("./app/routes/user")(app)
 require("./app/routes/auth")(app)
 require("./app/routes/role")(app)
+
+// swagger
+app.use('/api/docs', swaggerUI.serve, swaggerUI.setup(swaggerFile))
  
 // set port, listen for requests
 const PORT = process.env.NODE_DOCKER_PORT || 8080;
